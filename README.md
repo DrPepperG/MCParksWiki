@@ -1,7 +1,7 @@
-# TFPWiki
-Currently operating on MediaWiki stable-fpm-alpine(v1.41).
+# MCParks Wiki
+Currently operating on MediaWiki stable-fpm-alpine(v1.43.1).
 
-This docker image automatically pulls in LocalSettings from this repository, these settings are for use by **TFPWiki**.
+This docker image automatically pulls in LocalSettings from this repository, these settings are for use by **MCParks Wiki**.
 
 ## Installed Extra Extensions
 - [mw-discord](https://www.mediawiki.org/wiki/Extension:Discord)
