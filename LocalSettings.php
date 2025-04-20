@@ -207,7 +207,7 @@ if (getenv('ID_SECRET')) {
 			'providerURL' => getenv('ID_PROVIDER'),
 			'clientID' => getenv('ID_CLIENT'),
 			'clientsecret' => getenv('ID_SECRET'),
-			'preferred_username' => 'sub'
+			'preferred_username' => 'username'
 		]
 	];
 }
