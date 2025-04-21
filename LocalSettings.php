@@ -38,8 +38,8 @@ require_once("$IP/CommonSettings.php");
 ## The URL paths to the logo.  Make sure you change this from the default,
 ## or else you'll overwrite your logo when you upgrade!
 $wgLogos = [
-	'1x' => 'https://cdn.mcparks.wiki/static/MCParks_Vertical_Color.png',
-	'icon' => 'https://cdn.mcparks.wiki/static/MCParks_Castle_Color.png',
+	'1x' => 'https://cdn.mcparks.wiki/static/MCParks_Vertical_Color.svg',
+	'icon' => 'https://cdn.mcparks.wiki/static/MCParks_Castle_Color.svg',
 	'wordmark' => [
 		'width' => '64',
 		'height' => '50',
