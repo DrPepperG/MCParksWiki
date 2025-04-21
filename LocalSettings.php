@@ -38,15 +38,15 @@ require_once("$IP/CommonSettings.php");
 ## The URL paths to the logo.  Make sure you change this from the default,
 ## or else you'll overwrite your logo when you upgrade!
 $wgLogos = [
-	'1x' => 'https://cdn.thefirepanel.com/original/2X/f/f13b84d22c745f168dbb20b53f704faf1bcce17c.png',
-	'icon' => 'https://cdn.thefirepanel.com/wiki/logos/logo_mark.png',
+	'1x' => 'https://cdn.mcparks.wiki/static/MCParks_Vertical_Color.png',
+	'icon' => 'https://cdn.mcparks.wiki/static/MCParks_Castle_Color.png',
 	'wordmark' => [
 		'width' => '124',
 		'height' => '50',
-		'src' => 'https://cdn.thefirepanel.com/wiki/logos/word_mark.png'
+		'src' => 'https://cdn.mcparks.wiki/static/MCParks_WordMark.png'
 	]
 ];
-$wgFavicon = "https://cdn.thefirepanel.com/wiki/logos/logo_mark.png";
+$wgFavicon = "https://cdn.mcparks.wiki/static/favicon.ico";
 
 # MySQL table options to use during installation or update
 $wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
@@ -97,7 +97,7 @@ $wgAuthenticationTokenVersion = "1";
 $wgRightsPage = ""; # Set to the title of a wiki page that describes your license/copyright
 $wgRightsUrl = "https://creativecommons.org/licenses/by-nc-sa/4.0/";
 $wgRightsText = "Creative Commons Attribution-ShareAlike License";
-$wgRightsIcon = "https://cdn.thefirepanel.com/wiki/Creative_commons.png";
+$wgRightsIcon = "https://cdn.mcparks.wiki/static/Creative_commons.png";
 
 # Path to the GNU diff3 utility. Used for conflict resolution.
 $wgDiff3 = "/usr/bin/diff3";
