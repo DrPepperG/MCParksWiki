@@ -6,11 +6,9 @@ cd $DIR # Make sure we are set in the correct wd
 declare -A repos=(
     ["https://github.com/jayktaylor/mw-discord"]="REL1_39"
     ["https://github.com/edwardspec/mediawiki-aws-s3"]="master"
-    ["https://gerrit.wikimedia.org/r/mediawiki/extensions/Disambiguator"]="REL1_41"
-    ["https://gerrit.wikimedia.org/r/mediawiki/extensions/MobileFrontend"]="REL1_41"
-    ["https://gerrit.wikimedia.org/r/mediawiki/extensions/OpenIDConnect"]="REL1_41"
-    ["https://gerrit.wikimedia.org/r/mediawiki/extensions/PluggableAuth"]="REL1_41"
-    ["https://gerrit.wikimedia.org/r/mediawiki/extensions/TemplateStyles"]="REL1_41"
+    ["https://gerrit.wikimedia.org/r/mediawiki/extensions/Disambiguator"]="REL1_43"
+    ["https://gerrit.wikimedia.org/r/mediawiki/extensions/MobileFrontend"]="REL1_43"
+    ["https://gerrit.wikimedia.org/r/mediawiki/extensions/TemplateStyles"]="REL1_43"
 )
 
 # Go into extensions directory

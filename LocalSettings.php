@@ -15,6 +15,20 @@ if (!defined('MEDIAWIKI')) {
 	exit;
 }
 
+if (getenv('DEBUG')) {
+    if (function_exists('opcache_reset')) {
+        opcache_reset(); // clears cache, doesn't disable
+    }
+
+    ini_set('opcache.validate_timestamps', 1);
+    ini_set('opcache.revalidate_freq', 0);
+
+	error_reporting( -1 );
+	ini_set( 'display_errors', 1 );
+
+	$wgShowExceptionDetails = true;
+}
+
 # Add CommonSettings from image.
 require_once("$IP/CommonSettings.php");
 
@@ -190,9 +204,11 @@ if (getenv('S3_KEY')) {
 }
 
 ## Pluggable Auth
-if (getenv('ID_SECRET')) {
+## For future use!
+/*if (getenv('ID_SECRET')) {
 	wfLoadExtension('PluggableAuth');
-	wfLoadExtension('OpenIDConnect');
+	wfLoadExtension('WSOAuth');
+	wfLoadExtension('MinecraftAuth');
 
 	$wgGroupPermissions['*']['createaccount'] = false;
 	$wgGroupPermissions['*']['autocreateaccount'] = true;
@@ -201,17 +217,19 @@ if (getenv('ID_SECRET')) {
 	$wgObjectCacheSessionExpiry = 86400;
 	$wgRememberMe = 'always';
 
+	$wgOAuthCustomAuthProviders = ['minecraft' => \MinecraftAuth\AuthenticationProvider\MinecraftAuth::class];
 	$wgPluggableAuth_Config[] = [
-		'plugin' => 'OpenIDConnect',
+		'plugin' => 'WSOAuth',
 		'data' => [
+			'type' => 'minecraft',
 			'providerURL' => getenv('ID_PROVIDER'),
 			'clientID' => getenv('ID_CLIENT'),
 			'clientsecret' => getenv('ID_SECRET'),
-			'scope' => getenv('ID_SCOPE'),
-			'preferred_username' => 'username'
-		]
+			'scope' => getenv('ID_SCOPE')
+		],
+		#'buttonLabelMessage' => 'Login with Minecraft'
 	];
-}
+}*/
 
 ## Discord
 if (getenv('DISCORD_WEBHOOK')) {
