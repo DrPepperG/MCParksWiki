@@ -39,9 +39,13 @@ require_once("$IP/CommonSettings.php");
 ## or else you'll overwrite your logo when you upgrade!
 $wgLogos = [
 	'1x' => 'https://cdn.mcparks.wiki/static/MCParks_Vertical_Color.png',
-	'icon' => 'https://cdn.mcparks.wiki/static/MCParks_Castle_Color.png',
+	'icon' => [
+		'width' => '33',
+		'height' => '50',
+		'src' => 'https://cdn.mcparks.wiki/static/MCParks_Castle_Color.png'
+	],
 	'wordmark' => [
-		'width' => '124',
+		'width' => '64',
 		'height' => '50',
 		'src' => 'https://cdn.mcparks.wiki/static/MCParks_WordMark.png'
 	]
