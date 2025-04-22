@@ -43,7 +43,7 @@ $wgLogos = [
 	'wordmark' => [
 		'width' => '64',
 		'height' => '50',
-		'src' => 'https://cdn.mcparks.wiki/static/MCParks_WordMark.png'
+		'src' => 'https://cdn.mcparks.wiki/static/MCParks_WordMark.svg'
 	]
 ];
 $wgFavicon = "https://cdn.mcparks.wiki/static/favicon.ico";
