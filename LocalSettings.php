@@ -154,6 +154,7 @@ wfLoadExtension('Disambiguator');
 wfLoadExtension('MobileFrontend');
 $wgMFDefaultSkinClass = 'MinervaNeue';
 wfLoadExtension('TemplateStyles');
+wfLoadExtension('mediawiki-extensions-TabberNeue');
 
 ## Image uploads
 $wgFileExtensions = array_merge($wgFileExtensions, [
@@ -202,34 +203,6 @@ if (getenv('S3_KEY')) {
 	$wgAWSBucketTopSubdirectory = getenv('S3_PREFIX');
 	$wgAWSBucketDomain = getenv('S3_DOMAIN');
 }
-
-## Pluggable Auth
-## For future use!
-/*if (getenv('ID_SECRET')) {
-	wfLoadExtension('PluggableAuth');
-	wfLoadExtension('WSOAuth');
-	wfLoadExtension('MinecraftAuth');
-
-	$wgGroupPermissions['*']['createaccount'] = false;
-	$wgGroupPermissions['*']['autocreateaccount'] = true;
-
-	# 1 day session expire, unless user has refresh token
-	$wgObjectCacheSessionExpiry = 86400;
-	$wgRememberMe = 'always';
-
-	$wgOAuthCustomAuthProviders = ['minecraft' => \MinecraftAuth\AuthenticationProvider\MinecraftAuth::class];
-	$wgPluggableAuth_Config[] = [
-		'plugin' => 'WSOAuth',
-		'data' => [
-			'type' => 'minecraft',
-			'providerURL' => getenv('ID_PROVIDER'),
-			'clientID' => getenv('ID_CLIENT'),
-			'clientsecret' => getenv('ID_SECRET'),
-			'scope' => getenv('ID_SCOPE')
-		],
-		#'buttonLabelMessage' => 'Login with Minecraft'
-	];
-}*/
 
 ## Discord
 if (getenv('DISCORD_WEBHOOK')) {
