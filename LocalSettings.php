@@ -180,7 +180,8 @@ if (getenv('SMTP_HOST')) {
 
 	$wgEnotifUserTalk = false;
 	$wgEnotifWatchlist = false;
-	$wgEmailAuthentication = false; # Discourse sends verfied emails already
+	$wgEmailAuthentication = true;
+	$wgEmailConfirmToEdit = true;
 }
 
 ## Permission Config
